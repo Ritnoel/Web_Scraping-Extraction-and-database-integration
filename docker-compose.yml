@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: amdari_user
+      POSTGRES_PASSWORD: Passw0rd
+      POSTGRES_DB: amdari_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
